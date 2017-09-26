@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      Occupations
-    </title>
-  </head>
-  <body>
-    {% for i in occDic: %}
-      {{i}}
-    {% endfor %}
 
-  </body>
+<head>
+  <title>
+    Occupations
+  </title>
+</head>
+
+<body>
+  <table border = "1">
+    <tr>
+      <th>Occupations</th>
+      <th>Percentage</th>
+    </tr>
+    {% block body %}
+    {% for i in occDic: %}
+    <tr>
+      <td>{{i}}</td>
+      <td>{{occDic[i]}}</td>
+    </tr>
+    {% endfor %}
+    {% endblock %}
+    <tr>
+        <th>Total</th>
+        <th>99.8</th>
+      </tr>
+  </table>
+</body>
+
 </html>
