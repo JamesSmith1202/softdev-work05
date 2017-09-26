@@ -10,10 +10,10 @@ def root():
 
 @app.route("/occupations")
 def occupations():
-    dicRandTuple = run("occupations.csv");
-    occDic = 
-    
-
+    dicRandTuple = work03.run("occupations.csv");
+    occDic = dicRandTuple[0]
+    randomOcc = dicRandTuple[1]
+    render_template("job.html", occDic, randomOcc)
 
 if __name__ = "__main__":
     app.debug = true
