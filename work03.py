@@ -52,4 +52,4 @@ def printAll():
 def run(csvFile):
     lineList = open_read(csvFile)
     listToDict(lineList)
-    return(d, (getRandom()))        
+    return(d, (getRandom()))
