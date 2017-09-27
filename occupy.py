@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return "Howdy! Come to our occupations page! <a href = ""http://127.0.0.1:5000/occupations""> ITS HERE </a>"
+    return render_template("home.html")
 
 @app.route("/occupations")
 def occupations():

@@ -6,15 +6,46 @@
     Occupations
   </title>
 </head>
+<style>
+body{
+   background-color:#6494AA
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-<body>
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #90A959}
+tr:nth-child(odd){background-color: #E9B872}
+
+th {
+    background-color: #A63D40;
+    color: white;
+}
+
+hr {
+  color: #f00;
+  background-color: #f00;
+  height: 5px;
+}
+
+h1{
+  font-size: 300%;
+}
+</style>
+<body><center>
   <table border="1">
     <tr>
       <th>Occupations</th>
       <th>Percentage</th>
       <th>Job Links</th>
     </tr>
-    {% block body %} 
+    {% block body %}
     {% for i in occDic: %}
     <tr>
       <td>{{i}}</td>
@@ -26,12 +57,12 @@
       <th>Total</th>
       <th>99.8</th>
     </tr>
-  </table>
+  </table></center>
   <br>
-  <hr>
-    <b>Random Occupation: </b>
+  <hr><center>
+    <h1><b>Random Occupation: </b>
     {{randomOcc}}
-    {% endblock %}
+    {% endblock %}</h1></center>
 </body>
 
 </html>
