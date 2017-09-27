@@ -8,24 +8,28 @@
 </head>
 
 <body>
-  <table border = "1">
+  <table border="1">
     <tr>
       <th>Occupations</th>
       <th>Percentage</th>
     </tr>
-    {% block body %}
+    {% block body %} 
     {% for i in occDic: %}
     <tr>
       <td>{{i}}</td>
       <td>{{occDic[i]}}</td>
     </tr>
     {% endfor %}
-    {% endblock %}
     <tr>
-        <th>Total</th>
-        <th>99.8</th>
-      </tr>
+      <th>Total</th>
+      <th>99.8</th>
+    </tr>
   </table>
+  <br>
+  <hr>
+    <b>Random Occupation: </b>
+    {{randomOcc}}
+    {% endblock %}
 </body>
 
 </html>
