@@ -12,12 +12,14 @@
     <tr>
       <th>Occupations</th>
       <th>Percentage</th>
+      <th>Job Links</th>
     </tr>
     {% block body %} 
     {% for i in occDic: %}
     <tr>
       <td>{{i}}</td>
-      <td>{{occDic[i]}}</td>
+      <td>{{occDic[i][0]}}</td>
+      <td><a href = {{occDic[i][1]}}>{{occDic[i][1]}}</a></td>
     </tr>
     {% endfor %}
     <tr>
